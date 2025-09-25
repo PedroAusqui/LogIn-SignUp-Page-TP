@@ -10,7 +10,7 @@ class User{
         $this->db = $db_connection;
     }
 
-    public function create($email, $hashed_password){
+    public function create($Username,$BirthDate,$email,$hashed_password){
 
         $sql = "INSERTAR DATOS EN DB"
         
