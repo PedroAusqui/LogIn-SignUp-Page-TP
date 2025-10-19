@@ -1,0 +1,263 @@
+@import url('https://fonts.googleapis.com/css2?family=Reem+Kufi+Fun:wght@400;500;600;700&display=swap'); 
+/*Primary Font*/ 
+
+
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@400;700&display=swap');
+/*Secundary Font*/
+
+
+body {
+  margin: 0;
+  font-family: Arial, sans-serif;
+  
+}
+
+.Main-Container {
+  display: flex;
+  height: 100vh;
+  background-color: #2D3035;
+}
+
+
+
+
+
+/*----------------------------- LEFT SIDE -----------------------------*/
+
+.Left-Side {
+  flex: 6.5; 
+  background-image: url(../assets/Img/Background.png);
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  margin: 0.5%;
+  margin-right: 0;
+  padding: 20px;
+  display: flex;
+
+  justify-content: start;
+  align-items: center;
+
+  
+}
+.left-content {
+  
+  max-width: 1000px;
+  margin-left: 13%;
+  color: white;
+  margin-bottom: 14%;
+}
+
+.logo-icon {
+  width: 57px;  
+  width: 7%;
+  margin-bottom: 2%;
+}
+
+.left-content h2 {
+   font-size: 7.5vh;
+  
+  margin: 0;
+  font-family: 'Reem Kufi Fun', sans-serif;
+}
+
+.left-content h1 {
+  font-size: 7.5vh; 
+
+  font-family: 'Reem Kufi Fun', sans-serif;
+    
+}
+
+.left-content p {
+  
+  margin-top: 13%;
+  font-size: 125%;
+  line-height: 165%;
+  color: #ddd;
+  font-family: 'Poppins', sans-serif;
+}
+
+
+
+
+
+
+/*----------------------------- RIGHT SIDE -----------------------------*/
+
+
+.Right-Side {
+    flex: 5; 
+    background-color: #2D3035;
+    padding: 20px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  
+    margin-right: 3%;
+}
+
+.login-container {
+  max-width: 450px;
+  width: 70%;
+  text-align: center;
+}
+
+.login-container .title {
+  font-size: 8vh;
+  font-weight: 700;
+  margin-bottom: 1%;
+  font-family: 'Reem Kufi Fun', sans-serif;
+  color: #3BCD84;
+}
+
+.login-container .subtitle {
+  font-size: 2.15vh;
+  height: 20%;
+  color: #ffffff;
+  font-family: 'Poppins', sans-serif;
+}
+
+.input-group {
+  margin-bottom: 1%;
+  margin-top: 14%;
+  background-color: #2D3035;
+}
+
+.input-group input {
+ background-color: #2D3035;
+  width: 100%;
+  padding: 2% 2%;
+  border: none;
+  border-bottom: 2px solid #8c8c8c;
+  outline: none;
+  font-size: 2vh;
+  font-family: 'Poppins', sans-serif;
+  color: #8c8c8c;
+}
+
+.input-group input:focus {
+  color: #ffffff;
+  border-color: #ffffff;
+  border-bottom: 2px solid rgb(255, 255, 255);
+}
+
+
+.show-pass {
+  display: none;
+}
+
+.toggle-eye {
+  position: absolute;
+  right: 10px;
+  top: 55%;
+  height: 2vh;
+  width: 2vh;
+  transform: translateY(-50%);
+  cursor: pointer;
+  background: url(../assets/Img/PasswordEyeOff.png) no-repeat center;
+  background-size: contain;
+}
+
+.show-pass:checked + .toggle-eye {
+  background: url(../assets/Img/PasswordEye.png) no-repeat center;
+  background-size: contain;
+}
+
+.options {
+  text-align: right;
+  margin-bottom: 6%;
+  font-size: 1.6vh;
+}
+
+.options a {
+  text-decoration: none;
+  color: #8c8c8c;
+
+}
+
+.options a span {
+  color: #3BCD84;
+  font-weight: 600;
+}
+
+.options a span:hover {
+  color: #3BCD84;
+  font-weight: 600;
+  border-bottom: 1px solid #3BCD84;
+}
+
+.btn-login {
+  width: 65%;
+  padding: 3.2%;
+  background: #161719;
+  color: #fff;
+  border: none;
+  border-radius: 4px;
+  font-size: 1.6vh;
+  cursor: pointer;
+  transition: background 0.3s;
+  margin-top: 11%;
+  font-family: 'Poppins', sans-serif;
+  
+}
+
+.btn-login:hover {
+  background: #0f0f0f;
+}
+
+.signup {
+  
+  margin-top: 2%;
+  font-size: 1.6vh;
+  color: #8c8c8c;
+  margin-bottom: 13%;
+}
+
+.signup a {
+  color: #3BCD84;
+  text-decoration: none;
+  font-weight: 600;
+  
+}
+
+.signup a:hover{
+  color: #3BCD84;
+  text-decoration: none;
+  font-weight: 600;
+  border-bottom: 1px solid #3BCD84;
+}
+
+.form-alert {
+  margin: 10px 0 15px;
+  padding: 10px 12px;
+  border-radius: 6px;
+  font-family: 'Poppins', sans-serif;
+  font-size: 0.95rem;
+}
+
+.form-alert.error   { background: #3b1a1a; color: #ffd6d6; border: 1px solid #ff5555; }
+
+
+
+@media (max-width: 1385px) {
+
+.left-content h2 {
+      font-size: 6.5vh;
+      
+    }
+
+    .left-content h1 {
+      font-size: 6.5vh;
+    }
+}
+@media (max-width: 1275px) {
+
+.left-content h2 {
+      font-size: 5.5vh;
+      
+    }
+
+    .left-content h1 {
+      font-size: 5.5vh;
+    }
+}

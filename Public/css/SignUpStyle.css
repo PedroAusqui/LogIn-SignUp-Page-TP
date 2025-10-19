@@ -1,0 +1,254 @@
+@import url('https://fonts.com/css2?family=Reem+Kufi+Fun:wght@400;500;600;700&display=swap');
+/* Primary Font */
+
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@400;700&display=swap');
+/* Secundary Font */
+
+/* --- GENERAL --- */
+body {
+    margin: 0;
+    font-family: Arial, sans-serif;
+}
+
+.Main-Container {
+    display: flex;
+    height: 100vh;
+    background-color: #2D3035;
+}
+
+/* ----------------------------- LEFT SIDE ----------------------------- */
+
+.Left-Side {
+    flex: 6.5;
+    margin: 0.5%;
+    margin-right: 0; /* Asegura que se pegue al contenedor derecho */
+
+    background-image: url(../assets/Img/Background.png);
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+
+    padding: 20px;
+    display: flex;
+    justify-content: start;
+    align-items: center;
+}
+
+.left-content {
+    max-width: 1000px;
+    margin-left: 13%;
+    color: white;
+    margin-bottom: 14%;
+}
+
+.logo-icon {
+    width: 7%;
+    margin-bottom: 2%;
+}
+
+.left-content h2,
+.left-content h1 {
+    font-size: 4.5rem; /* Ajustado de vh a rem/vh, usando rem como base */
+    margin: 0;
+    font-family: 'Reem Kufi Fun', sans-serif;
+}
+
+.left-content p {
+    margin-top: 13%;
+    font-size: 1.25rem; /* Ajustado a rem */
+    line-height: 1.65; /* Uso de unidad relativa */
+    color: #ddd;
+    font-family: 'Poppins', sans-serif;
+}
+
+
+/* ----------------------------- RIGHT SIDE ----------------------------- */
+
+.Right-Side {
+    flex: 5;
+    background-color: #2D3035;
+    padding: 20px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-right: 3%;
+}
+
+.SignUp-container {
+    max-width: 450px;
+    width: 70%;
+    text-align: center;
+}
+
+.SignUp-container .title {
+    font-size: 2.5rem; /* Ajustado a rem */
+    font-weight: 700;
+    margin-bottom: 1%;
+    font-family: 'Reem Kufi Fun', sans-serif;
+    color: #3BCD84;
+}
+
+.SignUp-container .subtitle {
+    font-size: 1.15rem; /* Ajustado a rem */
+    height: 20%;
+    color: #ffffff;
+    font-family: 'Poppins', sans-serif;
+}
+
+.input-group {
+    margin-bottom: 5px;
+    margin-top: 8%;
+    background-color: #2D3035;
+    position: relative; /* Es necesario para que .toggle-eye funcione correctamente */
+}
+
+.input-group input {
+    background-color: #2D3035;
+    width: 100%;
+    padding: 2% 2%;
+    border: none;
+    border-bottom: 2px solid #8c8c8c;
+    outline: none;
+    font-size: 1.1rem; /* Ajustado a rem */
+    font-family: 'Poppins', sans-serif;
+    color: #8c8c8c;
+    box-sizing: border-box; /* Asegura que el padding se incluya en el ancho */
+}
+
+.input-group input:focus {
+    color: #ffffff;
+    border-color: #ffffff;
+    border-bottom: 2px solid rgb(255, 255, 255);
+}
+
+input[type="date"]::-webkit-calendar-picker-indicator {
+    filter: invert(1);
+    cursor: pointer;
+}
+
+/* --- ESTILOS VISUALES PARA LA CONTRASEÑA --- */
+
+.show-pass {
+    display: none;
+}
+
+.toggle-eye {
+    position: absolute;
+    right: 5px;
+    top: 50%;
+    height: 1.3rem; /* Ajustado a rem */
+    width: 1.3rem; /* Ajustado a rem */
+    transform: translateY(-50%);
+    cursor: pointer;
+    background: url(../assets/Img/PasswordEyeOff.png) no-repeat center / contain;
+}
+
+.show-pass:checked + .toggle-eye {
+    background: url(../assets/Img/PasswordEye.png) no-repeat center / contain;
+}
+
+
+/* --- ESTILOS PARA LA VALIDACIÓN DE CONTRASEÑA (Integración) --- */
+#password-requirements {
+    display: none; /* <-- LÍNEA AÑADIDA PARA OCULTAR POR DEFECTO */
+    text-align: left;
+    margin-top: 5px;
+    padding: 0 5px;
+    font-family: 'Poppins', sans-serif;
+    font-size: 0.85rem;
+}
+
+#password-requirements p {
+    margin: 3px 0;
+    transition: color 0.3s ease;
+}
+
+.invalid {
+    color: #ff5555; /* Rojo para los requisitos no cumplidos */
+}
+
+.valid {
+    color: #3BCD84; /* Verde del tema para los requisitos cumplidos */
+    text-decoration: line-through; /* <-- LÍNEA AÑADIDA PARA TACHAR REQUISITO CUMPLIDO */
+}
+/* ----------------------------------------------------------------- */
+
+
+.btn-SignUp {
+    width: 65%;
+    padding: 1rem 0; /* Padding basado en rem para altura consistente */
+    background: #161719;
+    color: #fff;
+    border: none;
+    border-radius: 4px;
+    font-size: 1rem; /* Ajustado a rem */
+    cursor: pointer;
+    transition: background 0.3s;
+    margin-top: 8%;
+    font-family: 'Poppins', sans-serif;
+}
+
+.btn-SignUp:hover {
+    background: #0f0f0f;
+}
+
+.signup {
+    margin-top: 2%;
+    font-size: 0.9rem; /* Ajustado a rem */
+    color: #8c8c8c;
+    margin-bottom: 8%;
+}
+
+.signup a {
+    color: #3BCD84;
+    text-decoration: none;
+    font-weight: 600;
+}
+
+.signup a:hover{
+    color: #3BCD84;
+    text-decoration: none;
+    font-weight: 600;
+    border-bottom: 1px solid #3BCD84;
+}
+
+#confirm-feedback {
+  text-align: left;
+  margin-top: 6px;
+  padding: 0 5px;
+  font-family: 'Poppins', sans-serif;
+  font-size: 0.85rem;
+}
+
+#confirm-feedback p {
+  margin: 3px 0;
+  transition: color 0.3s ease;
+}
+
+.form-alert {
+  margin: 10px 0 15px;
+  padding: 10px 12px;
+  border-radius: 6px;
+  font-family: 'Poppins', sans-serif;
+  font-size: 0.95rem;
+}
+
+.form-alert.error   { background: #3b1a1a; color: #ffd6d6; border: 1px solid #ff5555; }
+
+
+/* ----------------------------- MEDIA QUERIES ----------------------------- */
+
+@media (max-width: 1385px) {
+    /* Unificado h2 y h1 */
+    .left-content h2,
+    .left-content h1 {
+        font-size: 3.8rem;
+    }
+}
+@media (max-width: 1275px) {
+    /* Unificado h2 y h1 */
+    .left-content h2,
+    .left-content h1 {
+        font-size: 3.2rem;
+    }
+}
